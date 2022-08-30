@@ -12,10 +12,10 @@
           </tr>
         </thead>
         <tbody>
-          <% @books.each do |book| %>
-          <th><%= image_tag @user.get_profile_image(80,80) %></th>
-          <th><%= @user.name %></th>
-          <th><%= link_to "Show", user_path(@user.id) %></th>
+          <% @users.each do |user| %>
+          <th><%= image_tag user.get_profile_image(80,80) %></th>
+          <th><%= user.name %></th>
+          <th><%= link_to "Show", user_path(user.id) %></th>
           <% end %>
         </tbody>
       </table>
