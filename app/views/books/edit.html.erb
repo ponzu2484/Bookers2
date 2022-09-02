@@ -2,8 +2,8 @@
   <div class="row">
     <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
       <h1>Editing Book</h1>
+      <%= form_with model:@book, url: book_path(@book.id), method: :patch do |f| %>
       <div class="form-group">
-        <%= form_with model:@book, url: book_path(@book.id), method: :patch do |f| %>
         <label for="book_title">Title</label><br>
         <%= f.text_field :title, class:"form-control" %>
       </div>
