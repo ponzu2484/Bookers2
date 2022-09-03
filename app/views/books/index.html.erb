@@ -1,4 +1,12 @@
 <div class="container px-5 px-sm-0">
+ <% if @book.errors.any? %>
+  <h3><%= pluralize(@book.errors.count, "error") %> prohibited this obj from being saved:</h3>
+  <ul>
+   <% @book.errors.full_messages.each do |message| %>
+   <li><%= message %></li>
+   <% end %>
+  </ul>
+ <% end %>
  <div class="row">
     <div class="col-md-3">
       <%= render 'users/user', user:@user %>
